@@ -58,28 +58,29 @@ header
     position relative
     display inline-block
     margin 0 .3em
-    padding .3em
-    width 6em
+    padding .3em .5em
+    padding-right .7em
     height 1
     text-decoration none
     // border-left .1em solid black
     letter-spacing .15em
     font-weight bold
-    font-size 10px
+    font-size 13px
     line-height 1em
     cursor pointer
-    transition color .1s ease-out
+    transition color .13s ease-out
+    transition-delay .07s
 
     &::before
       position absolute
       left -.15em
       z-index -1
       display block
-      width .16em
+      width 3px
       height 1em
-      border-radius .075em
+      border-radius 1.5px // .07em
       background black
-      content ''
+      content ' '
       transition width .3s ease-out, border-radius .3s ease-out
       pointer-events none
 

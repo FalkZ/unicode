@@ -4,10 +4,12 @@ grey2 = rgba(mix(#234, white, 20%), .8)
 *
   color black
   font-family Noto Sans, sans-serif
+  font-smooth always
+  -webkit-font-smoothing antialiased
 
 html, body
   margin 0
-  width 100%
+  width 100vw
 
 body
   overflow-x hidden
@@ -148,8 +150,9 @@ p
 .container
   display block
   overflow hidden
+  margin 0 auto
   margin-bottom -50px
-  max-width 100%
+  max-width 800px
 
   @media (max-width: 600px)
     margin-bottom -250px

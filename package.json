@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"build": "parcel build index.html --out-dir docs --public-url ."
+	},
+	"devDependencies": {
+		"stylus": "^0.54.5"
+	}
+}

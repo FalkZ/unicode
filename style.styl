@@ -1,0 +1,154 @@
+black = #011936
+grey2 = rgba(mix(#234, white, 20%), .8)
+
+*
+  color black
+  font-family Noto Sans, sans-serif
+
+html, body
+  margin 0
+  width 100%
+
+body
+  overflow-x hidden
+  padding 8px
+  padding-bottom 80vh
+
+head
+  display none
+
+header
+  position fixed
+  top 8px
+  right 8px
+  left 8px
+  z-index 2
+  display table-row
+  margin 0
+  padding 8px 25px
+  // width 100% // calc(100vw -16px)
+  // padding 25px
+  background grey2
+
+#logo
+  display table
+  margin 0
+  padding-right 25px
+  text-align center
+  font-size 20px
+  line-height 1em
+
+  #box
+    display block
+    border-radius .2em
+    background black
+    color white
+    line-height 1em
+
+&>*
+  display table-cell
+  justify-content right
+  vertical-align middle
+
+#nav
+  padding 0
+  line-height 1em
+
+  a
+    position relative
+    display inline-block
+    margin 0 .3em
+    padding .3em
+    width 6em
+    height 1
+    text-decoration none
+    // border-left .1em solid black
+    letter-spacing .15em
+    font-weight bold
+    font-size 10px
+    line-height 1em
+    cursor pointer
+    transition color .1s ease-out
+
+    &::before
+      position absolute
+      left -.15em
+      z-index -1
+      display block
+      width .16em
+      height 1em
+      border-radius .075em
+      background black
+      content ''
+      transition width .3s ease-out, border-radius .3s ease-out
+      pointer-events none
+
+    &:hover
+      color white !important
+
+      &::before
+        width 100%
+        border-radius .5em
+
+@media (max-width: 600px)
+  header>*
+    display table
+    margin 0 auto
+
+  #logo
+    padding 0
+
+  #nav
+    margin-top 1em
+
+    a
+      font-size 15px
+
+h2
+  margin 0
+  padding 25px
+
+  @media (max-width: 600px)
+    padding 12.5px
+
+  // display block
+  // float left
+  padding-top 100px
+
+  @media (max-width: 600px)
+    padding-top 300px
+
+p
+  // position relative
+  display inline-flex
+  // float left
+  margin 1em
+  margin 0
+  padding 1em
+
+  @media (max-width: 600px)
+    padding .5em
+
+  width 1em
+  height 1em
+  text-align center
+  font-size 25px
+  line-height 1em
+  cursor pointer
+  transition background .1s ease-out
+
+  &:active
+    cursor copy
+
+  &:hover
+    border-radius .1em
+    background grey2
+
+.container
+  display block
+  overflow hidden
+  margin-bottom -50px
+  max-width 100%
+
+  @media (max-width: 600px)
+    margin-bottom -250px

@@ -1,5 +1,5 @@
 black = #011936
-grey2 = rgba(mix(#234, white, 20%), .8)
+blue = rgba(#1E9AB0, .8)
 
 *
   color black
@@ -28,9 +28,8 @@ header
   display table-row
   margin 0
   padding 8px 25px
-  // width 100% // calc(100vw -16px)
-  // padding 25px
-  background grey2
+ 
+  background blue
 
 #logo
   display table
@@ -64,7 +63,6 @@ header
     padding-right .7em
     height 1
     text-decoration none
-    // border-left .1em solid black
     letter-spacing .15em
     font-weight bold
     font-size 13px
@@ -80,10 +78,10 @@ header
       display block
       width 3px
       height 1em
-      border-radius 1.5px // .07em
+      border-radius 1.5px 
       background black
       content ' '
-      transition width .3s ease-out, border-radius .3s ease-out
+      transition width .3s ease-out 
       pointer-events none
 
     &:hover
@@ -91,7 +89,7 @@ header
 
       &::before
         width 100%
-        border-radius .5em
+       
 
 @media (max-width: 600px)
   header>*
@@ -114,17 +112,13 @@ h2
   @media (max-width: 600px)
     padding 12.5px
 
-  // display block
-  // float left
   padding-top 100px
 
   @media (max-width: 600px)
     padding-top 300px
 
 p
-  // position relative
   display inline-flex
-  // float left
   margin 1em
   margin 0
   padding 1em
@@ -145,7 +139,7 @@ p
 
   &:hover
     border-radius .1em
-    background grey2
+    background blue
 
 .container
   display block

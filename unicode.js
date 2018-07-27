@@ -36,7 +36,10 @@ Object.keys(unicode).map((key) => {
 	a.setAttribute('href', '#' + key)
 	nav.appendChild(a)
 	parent.appendChild(title)
-	unicode[key].split('').map((value) => p({ parent, value }))
+	unicode[key]
+		.replace(/\n/g, '')
+		.split('')
+		.map((value) => p({ parent, value }))
 
 	document.body.appendChild(parent)
 })

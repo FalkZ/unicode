@@ -21,20 +21,21 @@ head
 
 header
   position fixed
-  top 8px
-  right 8px
-  left 8px
+  top 0
+  right 0
+  left 0
   z-index 2
   display table-row
   margin 0
   padding 8px 25px
- 
-  background blue
+  background black // rgba(white, .9)
+  box-shadow 1px -10px 15px 10px rgba(black, .75)
 
 #logo
   display table
   margin 0
   padding-right 25px
+  color white
   text-align center
   font-size 20px
   line-height 1em
@@ -42,8 +43,8 @@ header
   #box
     display block
     border-radius .2em
-    background black
-    color white
+    background white
+    color black
     line-height 1em
 
 &>*
@@ -62,6 +63,7 @@ header
     padding .3em .5em
     padding-right .7em
     height 1
+    color white
     text-decoration none
     letter-spacing .15em
     font-weight bold
@@ -78,18 +80,17 @@ header
       display block
       width 3px
       height 1em
-      border-radius 1.5px 
-      background black
+      border-radius 1.5px
+      background white
       content ' '
-      transition width .3s ease-out 
+      transition width .3s ease-out
       pointer-events none
 
     &:hover
-      color white !important
+      color black !important
 
       &::before
         width 100%
-       
 
 @media (max-width: 600px)
   header>*
@@ -128,18 +129,21 @@ p
 
   width 1em
   height 1em
+  border 1px solid transparent
   text-align center
   font-size 25px
   line-height 1em
   cursor pointer
-  transition background .1s ease-out
-
-  &:active
-    cursor copy
+  transition transform .1s ease-out
 
   &:hover
     border-radius .1em
-    background blue
+    // border 1px solid black
+    transform scale(1.5)
+
+  &:active
+    cursor copy
+    transform scale(1.8)
 
 .container
   display block
